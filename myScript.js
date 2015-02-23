@@ -26,61 +26,66 @@ function Load(){
 	alert("from load");
 	var grid = document.getElementById("Heading");
     grid.innerHTML = "";
-    grid.innerHTML = grid.innerHTML +"<div class='Cell'><p>ID</p></div><div class='Cell'><p>Index</p></div>\
-                                        <div class='Cell'>\
-                                            <p>Active</p>\
-                                        </div>\
-                                        <div class='Cell'>\
-                                            <p>Balance</p>\
-                                        </div>\
-                                        <div class='Cell'>\
-                                            <p>Age</p>\
-                                        </div>\
-                                        <div class='Cell'>\
-                                            <p>EyeColor</p>\
-                                        </div>\
-                                        <div class='Cell'>\
-                                            <p>Name</p>\
-                                        </div>\
-                                        <div class='Cell'>\
-                                            <p>Gender</p>\
-                                        </div>\
-                                        <div class='Cell'>\
-                                            <p>Company</p>\
-                                        </div>\
-                                        <div class='Cell'>\
-                                            <p>Email</p>\
-                                        </div>\
-                                        <div class='Cell'>\
-                                            <p>Phone</p>\
-                                        </div>\
-                                        <div class='Cell'>\
-                                            <p>Address</p>\
-                                        </div>\
-                                        <div class='Cell'>\
-                                            <p>Registered</p>\
-                                        </div>\
-                                        <div class='Cell'>\
-                                            <p>Favorite Fruit</p>\
-                                        </div>";
-    grid = document.getElementById("Row");
+    grid.innerHTML = grid.innerHTML +"<div class='Cell' type= 'ID'>\
+                                        <p>ID</p>\
+                                      </div>\
+                                      <div class='Cell' type = 'Index'>\
+                                        <p>Index</p>\
+                                     </div>\
+                                     <div class='Cell' type = 'Active'>\
+                                        <p>Active</p>\
+                                     </div>\
+                                     <div class='Cell' type = 'Balance'>\
+                                        <p>Balance</p>\
+                                     </div>\
+                                     <div class='Cell' type = 'Age'>\
+                                        <p>Age</p>\
+                                     </div>\
+                                     <div class='Cell' type = 'EyeColor'>\
+                                        <p>EyeColor</p>\
+                                     </div>\
+                                     <div class='Cell' type = 'Name'>\
+                                        <p>Name</p>\
+                                     </div>\
+                                     <div class='Cell' type = 'Gender'>\
+                                        <p>Gender</p>\
+                                     </div>\
+                                     <div class='Cell' type = 'Company'>\
+                                        <p>Company</p>\
+                                     </div>\
+                                     <div class='Cell' type = 'Email'>\
+                                        <p>Email</p>\
+                                     </div>\
+                                     <div class='Cell' type = 'Phone'>\
+                                        <p>Phone</p>\
+                                     </div>\
+                                     <div class='Cell' type = 'Address'>\
+                                        <p>Address</p>\
+                                     </div>\
+                                     <div class='Cell' type = 'Registered'>\
+                                        <p>Registered</p>\
+                                     </div>\
+                                     <div class='Cell' type = 'Fav_Fruit'>\
+                                        <p>Favorite Fruit</p>\
+                                     </div>";
+    grid = document.getElementById("Rows");
     grid.innerHTML = "";
     for (var i = 0; i < arr.length; i++) {
-        grid.innerHTML= grid.innerHTML +"<div id='Row'>\
-                                            <div class='Cell' id = 'ID'><p>"+ arr[i]['_id']+"</p></div>\
-                                            <div class='Cell' id = 'Index'>"+arr[i]['index']+"</div>\
-                                            <div class='Cell' id = 'Active'>"+arr[i]['isActive']+"</div>\
-                                            <div class='Cell' id = 'Balance'>"+arr[i]['balance']+"</div>\
-                                            <div class='Cell' id = 'Age'>"+arr[i]['age']+"</div>\
-                                            <div class='Cell' id = 'EyeColor'>"+arr[i]['eyeColor']+"</div>\
-                                            <div class='Cell' id = 'Name'>"+arr[i]['name']+"</div>\
-                                            <div class='Cell' id = 'Gender'>"+arr[i]['gender']+"</div>\
-                                            <div class='Cell' id = 'Company'>"+arr[i]['company']+"</div>\
-                                            <div class='Cell' id = 'Email'>"+arr[i]['email']+"</div>\
-                                            <div class='Cell' id = 'Phone'>"+arr[i]['phone']+"</div>\
-                                            <div class='Cell' id = 'Address'>"+arr[i]['address']+"</div>\
-                                            <div class='Cell' id = 'Registered'>"+arr[i]['registered']+"</div>\
-                                            <div class='Cell' id = 'Fav_Fruit'>"+arr[i]['favoriteFruit']+"</div>\
+        grid.innerHTML= grid.innerHTML +"<div class='Row'>\
+                                            <div class='Cell' type = 'ID'><p>"+ arr[i]['_id']+"</p></div>\
+                                            <div class='Cell' type = 'Index'><p>"+arr[i]['index']+"</p></div>\
+\                                           <div class='Cell' type = 'Active'><p>"+arr[i]['isActive']+"</p></div>\
+                                            <div class='Cell' type = 'Balance'><p>"+arr[i]['balance']+"</p></div>\
+                                            <div class='Cell' type = 'Age'><p>"+arr[i]['age']+"</p></div>\
+                                            <div class='Cell' type = 'EyeColor'><p>"+arr[i]['eyeColor']+"</p></div>\
+                                            <div class='Cell' type = 'Name'><p>"+arr[i]['name']+"</p></div>\
+                                            <div class='Cell' type = 'Gender'><p>"+arr[i]['gender']+"</p></div>\
+                                            <div class='Cell' type = 'Company'><p>"+arr[i]['company']+"</p></div>\
+                                            <div class='Cell' type = 'Email'><p>"+arr[i]['email']+"</p></div>\
+                                            <div class='Cell' type = 'Phone'><p>"+arr[i]['phone']+"</p></div>\
+                                            <div class='Cell' type = 'Address'><p>"+arr[i]['address']+"</p></div>\
+                                            <div class='Cell' type = 'Registered'><p>"+arr[i]['registered']+"</p></div>\
+                                            <div class='Cell' type = 'Fav_Fruit'><p>"+arr[i]['favoriteFruit']+"</p></div>\
                                          </div>";
                                 }
 }
