@@ -1,23 +1,63 @@
-<!DOCTYPE html>
+
 <html>
 	<head>
+	    <link rel="stylesheet" type="text/css" href="style.css">
+
 		<title>
 			JS Grid
 		</title>
 	</head>
     
-    <style type="text/css">
-    table,th,td {
+    <!-- <style type="text/css">
+    /*table,th,td {
     			border: 1px solid black;
 		}
 	th,td {
      padding: 5px;
+	}*/
+	
+	.row_heading{
+		background-color: yellow;
+		font-weight:bold;
+		border: 2px solid black;
+		display:inline;		
 	}
-	</style>
+
+
+	.cell{
+		display: inline;
+	}
+
+	#ID_heading{
+		width:100%;
+	 	text-align: center;		
+	}
+
+	#ID_cell{
+		border: 2px solid black;
+		width:15%;
+		margin-top: 0px;
+	}
+
+	#myGrid{
+		max-width: 100%;
+	}
+	
+	#row_head{
+		border: 1px solid black;
+		width: 100%;
+	}
+
+	</style>-->
 	<body>
 
 		<script src="myScript.js"></script>
-		<script>capture();</script>
-		<table class="Grid" id="myGrid"></table>
+		<script> capture();</script>
+         
+
+		<div class="Table" >
+					<div id="Heading"></div>
+					<div id="Row"></div>
+		</div>
 	</body>
 </html>
