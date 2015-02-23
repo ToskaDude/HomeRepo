@@ -23,58 +23,62 @@ function myFunction(response) {
 }
 
 function Load(){
-	alert("from load");
-	var grid = document.getElementById("Heading");
+	alert("from load");    
+    var grid = document.getElementById("Grid");
     grid.innerHTML = "";
-    grid.innerHTML = grid.innerHTML +"<div class='Cell' type= 'ID'>\
-                                        <p>ID</p>\
-                                      </div>\
-                                      <div class='Cell' type = 'Index'>\
-                                        <p>Index</p>\
-                                     </div>\
-                                     <div class='Cell' type = 'Active'>\
-                                        <p>Active</p>\
-                                     </div>\
-                                     <div class='Cell' type = 'Balance'>\
-                                        <p>Balance</p>\
-                                     </div>\
-                                     <div class='Cell' type = 'Age'>\
-                                        <p>Age</p>\
-                                     </div>\
-                                     <div class='Cell' type = 'EyeColor'>\
-                                        <p>EyeColor</p>\
-                                     </div>\
-                                     <div class='Cell' type = 'Name'>\
-                                        <p>Name</p>\
-                                     </div>\
-                                     <div class='Cell' type = 'Gender'>\
-                                        <p>Gender</p>\
-                                     </div>\
-                                     <div class='Cell' type = 'Company'>\
-                                        <p>Company</p>\
-                                     </div>\
-                                     <div class='Cell' type = 'Email'>\
-                                        <p>Email</p>\
-                                     </div>\
-                                     <div class='Cell' type = 'Phone'>\
-                                        <p>Phone</p>\
-                                     </div>\
-                                     <div class='Cell' type = 'Address'>\
-                                        <p>Address</p>\
-                                     </div>\
-                                     <div class='Cell' type = 'Registered'>\
-                                        <p>Registered</p>\
-                                     </div>\
-                                     <div class='Cell' type = 'Fav_Fruit'>\
-                                        <p>Favorite Fruit</p>\
-                                     </div>";
-    grid = document.getElementById("Rows");
-    grid.innerHTML = "";
-    for (var i = 0; i < arr.length; i++) {
+    for (var i = -1; i < arr.length; i++) {
+        if(i == -1){
+            grid.innerHTML = grid.innerHTML +"<div class = 'Heading'>\
+                                                <div class='Cell' type= 'ID'>\
+                                                    <p>ID</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'Index'>\
+                                                    <p>Index</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'Active'>\
+                                                    <p>Active</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'Balance'>\
+                                                    <p>Balance</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'Age'>\
+                                                    <p>Age</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'EyeColor'>\
+                                                    <p>EyeColor</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'Name'>\
+                                                    <p>Name</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'Gender'>\
+                                                    <p>Gender</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'Company'>\
+                                                    <p>Company</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'Email'>\
+                                                    <p>Email</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'Phone'>\
+                                                    <p>Phone</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'Address'>\
+                                                    <p>Address</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'Registered'>\
+                                                    <p>Registered</p>\
+                                                </div>\
+                                                <div class='Cell' type = 'Fav_Fruit'>\
+                                                    <p>Favorite Fruit</p>\
+                                                </div>\
+                                              </div>";
+        }
+        else{
+            
         grid.innerHTML= grid.innerHTML +"<div class='Row'>\
                                             <div class='Cell' type = 'ID'><p>"+ arr[i]['_id']+"</p></div>\
                                             <div class='Cell' type = 'Index'><p>"+arr[i]['index']+"</p></div>\
-\                                           <div class='Cell' type = 'Active'><p>"+arr[i]['isActive']+"</p></div>\
+                                            <div class='Cell' type = 'Active'><p>"+arr[i]['isActive']+"</p></div>\
                                             <div class='Cell' type = 'Balance'><p>"+arr[i]['balance']+"</p></div>\
                                             <div class='Cell' type = 'Age'><p>"+arr[i]['age']+"</p></div>\
                                             <div class='Cell' type = 'EyeColor'><p>"+arr[i]['eyeColor']+"</p></div>\
@@ -87,6 +91,7 @@ function Load(){
                                             <div class='Cell' type = 'Registered'><p>"+arr[i]['registered']+"</p></div>\
                                             <div class='Cell' type = 'Fav_Fruit'><p>"+arr[i]['favoriteFruit']+"</p></div>\
                                          </div>";
+        }
                                 }
 }
 
