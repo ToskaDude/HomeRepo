@@ -99,24 +99,26 @@ var n = 0;
 
 function changeIt(f)
     {
-        n++;        
-        my_div.innerHTML = my_div.innerHTML +"<input type='text' class='abc' id='mytext'"+n+"' >";
-
+        n++;  
+        if(n <=14 ){
+            my_div.innerHTML = my_div.innerHTML +"<input type='text' class='abc' id='mytext"+n+"' >";
+        }
+        else
+            alert("All Columns Have Been Displayed.");
 
         return 0;
     }
 
 function validate(){
     var flag=0;
-    alert(n);
+    alert(n);   
     var t = document.getElementById("mytext"+n);
-    
     if(t.value==""){
         alert("Please Enter A Title.");
           flag=1;
         }
         else{
-            alert(t.value);
+           alert(t.value);
            changeIt(); 
         }
 }
