@@ -37,3 +37,21 @@
     {
         display: none;
     }
+    .inner_frame
+    {
+        border: solid;
+        border-width: thin;
+        vertical-align: middle; 
+        margin-top:15px;
+        margin-left:325px;
+    }
+    #textbox
+    {
+        vertical-align: middle; 
+        margin-top:65px;
+        margin-left:375px;
+    }
+    #my_div
+    {
+        display: inline;
+    }
