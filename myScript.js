@@ -3,8 +3,8 @@ function capture(){
         alert("from capture");
         var xmlhttp = new XMLHttpRequest({mozSystem: true});
        // var xmlhttp = new XMLHttpRequest();
-        var url = "https://api.myjson.com/bins/50yc7";
-       // var url = "http://10.3.1.191/data.json";
+       // var url = "https://api.myjson.com/bins/50yc7";
+        var url = "http://10.3.1.191/data.json";
 
         xmlhttp.onreadystatechange=function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -74,7 +74,7 @@ function Load(){
                                               </div>";
         }
         else{
-            
+
         grid.innerHTML= grid.innerHTML +"<div class='Row'>\
                                             <div class='Cell' type = 'ID'><p>"+ arr[i]['_id']+"</p></div>\
                                             <div class='Cell' type = 'Index'><p>"+arr[i]['index']+"</p></div>\
@@ -95,9 +95,32 @@ function Load(){
                                 }
 }
 
-function changeIt()
-    {
-        var i = 1;
-        my_div.innerHTML = my_div.innerHTML +"<input type='text' name='mytext'+ i>"
+var n = 0;
 
+function changeIt(f)
+    {
+        n++;        
+        my_div.innerHTML = my_div.innerHTML +"<input type='text' class='abc' id='mytext'"+n+"' >";
+
+
+        return 0;
     }
+
+function validate(){
+    var flag=0;
+    alert(n);
+    var t = document.getElementById("mytext"+n);
+    
+    if(t.value==""){
+        alert("Please Enter A Title.");
+          flag=1;
+        }
+        else{
+            alert(t.value);
+           changeIt(); 
+        }
+}
+
+
+
+ 
