@@ -97,10 +97,23 @@ function Load(){
 
 var n = 0;
 
-function changeIt(f)
+function changeIt(textbox)
     {
-        n++;  
-        if(n <=14 ){
+        var grid = document.getElementById("Grid");
+        grid.innerHTML = "";
+        grid.innerHTML = grid.innerHTML +"<div class = 'Heading'>";
+        switch(textbox.value){
+            case "ID":   grid.innerHTML = grid.innerHTML + " <div class='Cell' type= 'ID'>\
+                                                                <p>ID</p>\
+                                                             </div></div>";
+                         grid.innerHTML= grid.innerHTML + "<div class='Row'>\
+                                                                <div class='Cell' type = 'ID'>\
+                                                                    <p>"+ arr[i]['_id']+"</p>\
+                                                                </div>\
+                                                            </div>";
+        }
+        if(n < 14 ){
+            n++; 
             my_div.innerHTML = my_div.innerHTML +"<input type='text' class='abc' id='mytext"+n+"' >";
         }
         else
@@ -110,16 +123,14 @@ function changeIt(f)
     }
 
 function validate(){
-    var flag=0;
     alert(n);   
-    var t = document.getElementById("mytext"+n);
-    if(t.value==""){
+    var textbox = document.getElementById("mytext"+n);
+    if(textbox.value==""){
         alert("Please Enter A Title.");
-          flag=1;
-        }
+    }
         else{
-           alert(t.value);
-           changeIt(); 
+           alert(textbox.value);
+           changeIt(textbox); 
         }
 }
 
